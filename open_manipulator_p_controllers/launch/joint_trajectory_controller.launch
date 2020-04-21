@@ -1,11 +1,13 @@
 <?xml version="1.0" ?>
 <launch>
   <arg name="sim" default="true"/>
+  <arg name="usb_port" default="/dev/ttyUSB0" />
   <arg name="with_gripper" default="false"/>
 
   <!-- startup ros_control for real robot -->
   <group unless="$(arg sim)">
     <include file="$(find open_manipulator_p_hw)/launch/open_manipulator_p_control.launch">
+      <arg name="usb_port" value="$(arg usb_port)"/>
       <arg name="with_gripper" value="$(arg with_gripper)"/>
     </include>
   </group>
