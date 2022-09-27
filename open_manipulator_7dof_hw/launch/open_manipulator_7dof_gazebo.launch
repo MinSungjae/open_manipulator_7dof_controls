@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="gui" default="true"/>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="with_gripper" default="false"/>
+  <arg name="left_right_arm" default="right_arm"/>
+
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+  </include>
+
+  <group if="$(eval left_right_arm == 'right_arm')">
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <include file="$(find pibot_right_arm_description)/launch/pibot_right_arm_upload.launch">
+      <!-- <arg name="with_gripper" value="$(arg with_gripper)"/> -->
+    </include>
+  </group>
+
+  <group if="$(eval left_right_arm == 'left_arm')">
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <include file="$(find pibot_left_arm_description)/launch/pibot_left_arm_upload.launch">
+      <!-- <arg name="with_gripper" value="$(arg with_gripper)"/> -->
+    </include>
+  </group>
+
+  <group if="$(eval left_right_arm == 'arm')">
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <include file="$(find open_manipulator_7dof_description)/launch/open_manipulator_7dof_upload.launch">
+      <arg name="with_gripper" value="$(arg with_gripper)"/>
+    </include>
+  </group>
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-urdf -model robot -z 0.0 -param robot_description"/>
+</launch>
