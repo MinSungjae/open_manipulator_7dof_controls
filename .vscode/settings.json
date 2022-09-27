@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/sungjae/pibot_ws/devel_isolated/text_position_server/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/schunk_svh_driver/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/schunk_svh_msgs/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/pibot_mission_interpreter/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/open_manipulator_msgs/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/dynamixel_workbench_msgs/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/dynamixel_sdk_examples/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/dynamixel_sdk/lib/python2.7/dist-packages",
+        "/home/sungjae/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/sungjae/pibot_ws/devel_isolated/text_position_server/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/schunk_svh_driver/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/schunk_svh_msgs/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/pibot_mission_interpreter/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/open_manipulator_msgs/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/dynamixel_workbench_msgs/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/dynamixel_sdk_examples/lib/python2.7/dist-packages",
+        "/home/sungjae/pibot_ws/devel_isolated/dynamixel_sdk/lib/python2.7/dist-packages",
+        "/home/sungjae/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

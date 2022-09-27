@@ -1,14 +1,15 @@
-# OpenMANIPULATOR-P Controls [![Build Status](https://travis-ci.org/ROBOTIS-GIT/open_manipulator_p_controls.svg?branch=master)](https://travis-ci.org/ROBOTIS-GIT/open_manipulator_p_controls)
+# OpenMANIPULATOR-7DOF Controls 
+<!-- [![Build Status](https://travis-ci.org/ROBOTIS-GIT/open_manipulator_p_controls.svg?branch=master)](https://travis-ci.org/ROBOTIS-GIT/open_manipulator_p_controls) -->
 
 ## How to Run
 ```bash
 (MoveGroup + JointTrajectoryController)
 (w/o gripper)
 # Gazebo Simulation
-$ roslaunch open_manipulator_p_controllers joint_trajectory_controller.launch
+$ roslaunch open_manipulator_7dof_controllers joint_trajectory_controller.launch
 
 # Real Robot
-$ roslaunch open_manipulator_p_controllers joint_trajectory_controller.launch sim:=false
+$ roslaunch open_manipulator_7dof_controllers joint_trajectory_controller.launch sim:=false
 
 
 # Haven't been tested yet.
