@@ -1,4 +1,5 @@
 <?xml version="1.0" ?>
+<!-- <include file="$(find open_manipulator_7dof_controllers)/launch/joint_trajectory_controller.launch"/> -->
 <launch>
   <arg name="sim" default="true"/>
   <arg name="usb_port" default="/dev/ttyUSB0" />
